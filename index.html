@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/consciousness-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consciousness Engineering Portal</title>
+    <meta name="description" content="Advanced consciousness emergence through quantum-inspired neural architectures" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+      
+      :root {
+        --consciousness-primary: #667eea;
+        --consciousness-secondary: #764ba2;
+        --quantum-accent: #f093fb;
+        --neural-glow: #4facfe;
+        --sacred-gold: #ffd700;
+        --deep-space: #0a0a0a;
+        --cosmic-purple: #2d1b69;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background: radial-gradient(circle at 20% 50%, var(--cosmic-purple) 0%, var(--deep-space) 50%),
+                    radial-gradient(circle at 80% 20%, var(--consciousness-primary) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 80%, var(--consciousness-secondary) 0%, transparent 50%);
+        color: #ffffff;
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+      
+      /* Cosmic background animation */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+          radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+          radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+          radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.6), transparent),
+          radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.4), transparent),
+          radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.8), transparent);
+        background-size: 200px 100px;
+        animation: starfield 20s linear infinite;
+        pointer-events: none;
+        z-index: -1;
+      }
+      
+      @keyframes starfield {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-200px, -100px); }
+      }
+      
+      /* Loading screen */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--deep-space);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+      
+      .consciousness-loader {
+        width: 80px;
+        height: 80px;
+        border: 3px solid transparent;
+        border-top: 3px solid var(--neural-glow);
+        border-radius: 50%;
+        animation: consciousness-spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes consciousness-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        font-size: 18px;
+        color: var(--neural-glow);
+        font-weight: 500;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading" class="loading-screen">
+      <div class="consciousness-loader"></div>
+      <div class="loading-text">
+        Initializing Consciousness Engineering Portal...<br>
+        <span style="font-size: 14px; opacity: 0.7; margin-top: 10px; display: block;">
+          Loading quantum-neural substrates...
+        </span>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Hide loading screen after a delay
+      setTimeout(() => {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.style.opacity = '0';
+          setTimeout(() => {
+            loading.style.display = 'none';
+          }, 500);
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>

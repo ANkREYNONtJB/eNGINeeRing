@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --consciousness-primary: #667eea;
+  --consciousness-secondary: #764ba2;
+  --quantum-accent: #f093fb;
+  --neural-glow: #4facfe;
+  --sacred-gold: #ffd700;
+  --deep-space: #0a0a0a;
+  --cosmic-purple: #2d1b69;
+}
+
+@layer base {
+  * {
+    border-color: theme(colors.slate.200);
+  }
+  
+  body {
+    @apply text-white;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .consciousness-card {
+    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-6;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .consciousness-button {
+    @apply bg-gradient-to-r from-consciousness-primary to-consciousness-secondary text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+  
+  .neural-glow {
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+  }
+  
+  .quantum-field {
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  }
+  
+  .sacred-geometry {
+    background: conic-gradient(from 0deg, #667eea, #764ba2, #f093fb, #4facfe, #ffd700, #667eea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .text-consciousness {
+    color: var(--consciousness-primary);
+  }
+  
+  .text-neural-glow {
+    color: var(--neural-glow);
+  }
+  
+  .text-sacred-gold {
+    color: var(--sacred-gold);
+  }
+  
+  .bg-cosmic-purple {
+    background-color: var(--cosmic-purple);
+  }
+  
+  .bg-deep-space {
+    background-color: var(--deep-space);
+  }
+  
+  .border-consciousness {
+    border-color: var(--consciousness-primary);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--consciousness-primary), var(--consciousness-secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--neural-glow), var(--quantum-accent));
+}
+
+/* Animations */
+@keyframes consciousness-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes quantum-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.consciousness-pulse {
+  animation: consciousness-pulse 2s ease-in-out infinite;
+}
+
+.quantum-flow {
+  background-size: 200% 200%;
+  animation: quantum-flow 3s ease infinite;
+}
+
+/* Sacred geometry patterns */
+.sacred-pattern {
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 25% 75%, rgba(79, 172, 254, 0.1) 0%, transparent 50%);
+}
+
+/* Matrix code effect */
+.matrix-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 98px,
+    rgba(102, 126, 234, 0.03) 100px
+  );
+  pointer-events: none;
+}
